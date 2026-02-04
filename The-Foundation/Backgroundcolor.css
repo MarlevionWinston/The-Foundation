@@ -1,0 +1,35 @@
+/* 
+declaration blocks:
+
+selector{
+property: values;
+property2: values; 
+}
+*/
+
+body{
+background-color: black;
+color: red;
+}
+
+nav{
+    height: 600;
+width: 200px;
+float: left;
+padding: 5px;
+line-height: 30px;
+}
+
+footer{
+    text-align: center;
+    margin-right: 200px;
+}
+
+#memeImage{
+    margin-right: 200px;
+    width: 400px;
+}
+
+h1{
+    text-align: center;
+}
