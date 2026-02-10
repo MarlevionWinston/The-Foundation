@@ -1,33 +1,45 @@
-<!-- Marlevion Winston for the foundation 1/22/26 -->
-<!-- Ctrl + ? will generate the code comment in VS Code for the type of code you are using
+ <!-- Marlevion Winston for the foundation 1/22/26 -->
+ <!-- Ctrl + ? will generate the code comment in VS Code for the type of code you are using
  this is an HTML comment - it is a multi-line comment -->
-<!-- HTML is HyperText Markup Language; the line below specfies that this is an HTML 5 webpage -->
+ <!-- HTML is HyperText Markup Language; the line below specfies that this is an HTML 5 webpage -->
  <!DOCTYPE html>
-<!-- have an html opening tag after the doctype is specified -->
-<html lang="en">
-<!-- head section - this is primarily for browsers and search engines -->
-<head> <!--opening tag-->
-<!-- this means that pretty much any character from any language may appear in this page -->
+ <!-- have an html opening tag after the doctype is specified -->
+ <html lang="en">
+ <!-- head section - this is primarily for browsers and search engines -->
+ <head> <!--opening tag-->
+ <!-- this means that pretty much any character from any language may appear in this page -->
     <meta charset="UTF-8">
     <!-- this is the first step in having a mobile friendly design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Title</title>
-</head>
-<!-- All of my page content goes between the opening and the closing body tags -->
-<body>
-<!-- Header is a semantic HTML tag 
+    <!-- add a link to the css file for background color -->
+     <link rel="stylesheet" href="Backgroundcolor.css">
+ </head>
+ <!-- All of my page content goes between the opening and the closing body tags -->
+ <body>
+ <!-- Header is a semantic HTML tag 
  header- typically has a logo and/or menu -->
  
  <header>
     <!-- h1 is heading1 the page title -->
-<h1>Welcome to my humble home</h1>
+ <h1>Welcome to my humble home</h1>
  </header>
+
  <div>
-<p>
+    <h2>Play my dice game</h2>
+ <button onclick="playDiceGame();">Play</button>  
+  <div id="divMessage">Waiting for the game to start</div>
+  <div id="divRoll1"></div>
+  <div id="divRoll2"></div>
+  <div id="divSum"></div>
+
+<!-- Link to COde for game (game logic) -->
+ <script src="Code.js"></script>
+ <p>
     <!-- Image under heading1 -->
     <img id="memeImage" src="dbz-one-piece.gif" width="300"> 
-</p>
+ </p>
  </div>    
-</body>
-<!--the closing html tag should be at the very end of the file-->
-</html> <!--closing tag-->
+ </body>
+ <!--the closing html tag should be at the very end of the file-->
+ </html> <!--closing tag-->
