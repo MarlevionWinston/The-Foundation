@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Validations</title>
+</head>
+<body>
+<header>
+    <h1>Input Validations</h1>
+</header>
+<main>
+<form>
+    <!-- add div tags around each label/input combo, so that they are on the line together; labels & inputs are inline elements; div is block -->
+    <div>
+    <label for="txtFirstName">FirstName: </label>
+<input type="text" id="txtFirstName">
+</div>
+<div>
+    <label for="txtLastName">LastName: </label>
+<input type="text" id="txtLastName">
+</div>
+<div>
+<label for="txtZip">Zip Code: </label>
+<input type="text" id="txtZip">
+</div>
+<button type="button" onclick="validate();">Validate!</button>
+</form>
+</main>
+
+<Script>
+// this function will validate the user input based on the requirement of the client (assignment requirements)
+function validate(){
+    // First Name variable
+    let FirstName = document.getElementById("txtFirstName").value;
+    // show the first name in console
+    console.log("FirstName="+FirstName);
+// Last Name Variable
+let LastName = document.getElementById("txtLastName").value;
+// Show the last name in the console
+console.log("LastName="+LastName);
+// Zip code variable
+let zip = document.getElementById("txtZip").value;
+// Show the zip in the console
+console.log("zip="+zip);
+// create a variable to hold the first name + " " + last name
+let fullName = FirstName + " " + LastName;
+
+console.log("fullName="+fullName);
+// create a variable to hold the message we will show to the user
+let message = ""
+// Make sure the full name does not exceed 20 characters
+if (fullName.length == 1 || fullName.length > 20){
+    message = "Please enter a name that is less than 20 characters.";
+}
+
+console.log("message=" + message);
+}
+</Script>
+</body>
+</html>
