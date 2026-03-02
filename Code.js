@@ -14,7 +14,7 @@ function playDiceGame(){
     // if you divide a number by 2 and there is no remainder, the number is even
     if (roll1 == roll2 && roll1 % 2 == 0){
         // update the message div with the good news that the round was a win
-        document.getElementById("divMessage").textContent = "GGs, You Win!";
+        document.getElementById("divMessage").textContent = "GGs, you win!";
     }
     // if the user rolls a 7 or 11, they lose
     else if(rollSum == 7 || rollSum == 11){
@@ -39,3 +39,43 @@ function getRandomNumber(){
     // returning/passing back the random number
     return number;
 }
+// Code to move the meme around
+
+// Create a variable to track the current interval id(returned from the setInterval function)
+let intervalId = 0;
+   // create the function to move the page
+   function startImageMove(){
+      let memeImage = document.getElementById("memeImage");
+      // setInterval allows us to repeatedly run code
+    intervalId = setInterval(function(){
+         // get a random number for top and left coordinates
+         let topCord = getRandomPixels();
+         let leftCord = getRandomPixels();
+      
+         memeImage.style.left = leftCord + "px";
+         memeImage.style.top = topCord + "px";
+    
+      }, 1000);  // 1000 miliseconds = 1 second
+
+      // enable the stop button
+      document.getElementById("btnStop").disabled = false;
+
+      // disable the start button
+      document.getElementById("btnStart").disabled = true
+   }
+   // Create the function that stops the image from moving
+   function stopImageMove(){
+      // call a built in JavaScript function that stops the setInterval from clearInterval
+      clearInterval(intervalId);
+
+       // enable the stop button
+       document.getElementById("btnStop").disabled = true;
+       // disable the start button
+       document.getElementById("btnStart").disabled = false
+   }
+
+   // build a function to get a random number
+   function getRandomPixels(){
+      // 800 is the max number, adjust later to fit screen size
+      return Math.floor(Math.random() * 800);
+   }

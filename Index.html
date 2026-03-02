@@ -25,8 +25,20 @@
  <h1>Welcome to my humble home</h1>
  </header>
 
- <div>
-    <h2>Play my dice game</h2>
+<button id="btnStart" onclick="startImageMove();">Start Move Image</button>
+<button id="btnStop" onclick="stopImageMove();" disabled="true">Stop Move Image</button>
+<div>
+   <p>
+      <!-- Image under heading1 -->
+      <img id="memeImage" src="dbz-one-piece.gif" width="300"> 
+   </p>
+</div>
+<Script>
+
+
+
+</Script>
+    <h2>Play my dice game, if you dare</h2>
  <button onclick="playDiceGame();">Play</button>  
   <div id="divMessage">Waiting for the game to start</div>
   <div id="divRoll1"></div>
@@ -35,11 +47,5 @@
 
 <!-- Link to COde for game (game logic) -->
  <script src="Code.js"></script>
- <p>
-    <!-- Image under heading1 -->
-    <img id="memeImage" src="dbz-one-piece.gif" width="300"> 
- </p>
- </div>    
- </body>
  <!--the closing html tag should be at the very end of the file-->
  </html> <!--closing tag-->
