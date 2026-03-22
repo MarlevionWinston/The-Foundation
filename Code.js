@@ -79,3 +79,56 @@ let intervalId = 0;
       // 800 is the max number, adjust later to fit screen size
       return Math.floor(Math.random() * 800);
    }
+
+//    Palindrome Checking Code
+    // create the checkPalin function
+    function checkPalin(event){
+        // prevent the form from submitting
+        event.preventDefault();
+
+        let wordToTest = document.getElementById("txtWord").value;
+
+        console.log("wordToTest=" + wordToTest);
+
+        let bPalin = isPalin(wordToTest);
+
+        // Create a shortcut to message div
+        let divMessage = document.getElementById("divMessage");
+
+        // Create a message for the user based on the value of bPalin
+        if (bPalin){ 
+            // show the user a message
+            divMessage.textContent = "This is actually a Palindrome"
+        }
+        else{
+            divMessage.textContent = "This is ain't a Palindrome my boy/girl"
+        }
+    }
+
+    function isPalin(strToTest){
+     
+        strToTest = strToTest.toLowerCase();
+        // Replace all spaces /g of spaces /\s with an empty string
+        strToTest = strToTest.replace(/\s/g, "")
+
+        console.log("strToTest=" + strToTest);
+        // 
+
+// Create new variable so can keep the original string from testing
+        let strReverse = strToTest
+
+    //    convert the reverse to an array, we will reverse the contents
+    // so test would become tset and then convert the array back to a string
+    strReverse = strReverse.split("").reverse().join("");
+
+    console.log("strReverse=" + strReverse);
+
+    // compare the original string with the reverse string
+    // if they match, this function will return true, otherwise it will return false
+    if (strReverse == strToTest){
+        return true;    
+    }
+
+    // If we get to this line, it must not have been a palindrome, so return false; this is equal to the else above - include only 1 or the other
+    return false;
+    }
