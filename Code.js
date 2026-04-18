@@ -39,6 +39,34 @@ function getRandomNumber(){
     // returning/passing back the random number
     return number;
 }
+// Input Validation correction
+// this function will validate the user input based on the requirement of the client (assignment requirements)
+function validate(){
+    // First Name variable
+    let FirstName = document.getElementById("txtFirstName").value;
+    // show the first name in console
+    console.log("FirstName="+FirstName);
+// Last Name Variable
+let LastName = document.getElementById("txtLastName").value;
+// Show the last name in the console
+console.log("LastName="+LastName);
+// Zip code variable
+let zip = document.getElementById("txtZip").value;
+// Show the zip in the console
+console.log("zip="+zip);
+// create a variable to hold the first name + " " + last name
+let fullName = FirstName + " " + LastName;
+
+console.log("fullName="+fullName);
+// create a variable to hold the message we will show to the user
+let message = ""
+// Make sure the full name does not exceed 20 characters
+if (fullName.length == 1 || fullName.length > 20){
+    message = "Please enter a name that is less than 20 characters.";
+}
+
+console.log("message=" + message);
+}
 // Code to move the meme around
 
 // Create a variable to track the current interval id(returned from the setInterval function)
@@ -132,3 +160,45 @@ let intervalId = 0;
     // If we get to this line, it must not have been a palindrome, so return false; this is equal to the else above - include only 1 or the other
     return false;
     }
+
+     // this functio will add ana udio element to the page so we can listen to a sound clip
+     function addAudio(){
+        // this is the shortcut/nickname for the div that would hold the audio
+        let divAudio = document.getElementById("divAudio");
+        // creat an audio HTML element using JavaScript
+        let audioElement = document.createElement("audio");
+        // set the attributes of our new HTML element
+        // add an ID so we can more easily work with this element
+        audioElement.setAttribute("id", "myAudio");
+    
+        // add the file name as the source
+        // if you are using the sound file provided in the assignment, your code will look like this
+        audioElement.setAttribute("src", "us-lab-background.mp3")
+        // Highly Suggested - add controls
+        audioElement.setAttribute("controls", "controls");
+        // set the volume to half by default
+        audioElement.volume = 0;
+        // add our new HTML audio element to the div that will host it
+        divAudio.appendChild(audioElement);
+        // disallow the user from clicking the add audio button now that it has been added to the webpage
+        document.getElementById("btnAddAudio").hidden = true;
+        // make the play and pause butoons appear
+        document.getElementById("btnPlayAudio").hidden = false;
+        document.getElementById("btnPauseAudio").hidden = false;
+        }
+    
+        // create the function so that we can play the audio
+        function playAudio(){
+            // create a shortcut/nickname to the audio element that we created the addAudio function
+            let myAudio = document.getElementById("myAudio");
+            // let's play the sound!
+            myAudio.play();
+        }
+    
+        // create the function so that we can stop playing the audio
+        function pauseAudio(){
+            // create a shortcut/nickname to the audio element that we created the addAudio function
+            let myAudio = document.getElementById("myAudio");
+            // let's pause the sound!
+            myAudio.pause();
+        }
