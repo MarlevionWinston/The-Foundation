@@ -40,3 +40,26 @@ h1{
 h2{
     margin-top: 350px;
 }
+
+Table{
+    border: 2px solid white;
+    /* this will cause multiple overlapping borders to collapse into a single border */
+    border-collapse: collapse;
+}
+
+tr{
+    border: 2px solid white;
+}
+
+td{
+    padding: 5px;
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+tr:hover{
+    color:aqua;
+    background-color: cadetblue;
+}
