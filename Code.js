@@ -202,3 +202,54 @@ let intervalId = 0;
             // let's pause the sound!
             myAudio.pause();
         }
+
+         // This is our array/list of plants - add as many as you like
+         let arrPlants = ["Cactus", "Flower", "Aloe", "Rose", "Strawberry", "Tree", "Hydranga", "Tomato", "Basil", "Mint",];
+         // Shortcut to the unorded list that will hold the plants
+         let ulPlants = document.getElementById("ulPlants");
+         // this function will loop through the plants in the array and add them to the ulPlants unorderd list as list items
+         function showPlants(){
+             
+             // forEach is just another way of looping through the array
+             arrPlants.forEach(function(plant, index){
+                 // create a list item to held the current plant name as we loop through
+                 let li = document.createElement("li");
+                 // set the text of the list item to the current plant name
+                 li.textContent = plant;
+ 
+                 // Now add the plant to the list
+                 ulPlants.appendChild(li);
+             });
+         }
+ 
+         // the show plant function will be called 1 time when the page loads
+         showPlants();
+ 
+        /* let plant1 = "Cactus";
+         let plant2 = "Flower";
+         let plant3 = "Aloe";
+         let plant4 = "Rose";
+         let plant5 = "Strawberry";
+         let plant6 = "Tree";
+         let plant7 = "Hydranga";
+ 
+         console.log("plant1 = " + plant1);
+         console.log("plant2 = " + plant2);
+         console.log("plant3 = " + plant3);
+         console.log("plant4 = " + plant4);
+         console.log("plant5 = " + plant5);
+         console.log("plant6 = " + plant6);
+         console.log("plant7 = " + plant7);
+         */
+ 
+         // instead of setting up 7 separate variables, we are setting up 1 array with 7 slots
+         // watch out for the dreaded index out of bounds exception - most of the time when you see this error, it is because you are trying to access the item that matches the number of items in the array, so in this case, 7 - there is no 7th element in this array - the elements are in the 0 - 6 index
+         /*let arrPlants = ["Cactus", "Flower", "Aloe", "Rose", "Strawberry", "Tree", "Hydranga"];
+ 
+         // loop through the array
+         for (let i=0; i < arrPlants.length; i++){
+             console.log("plant" + (i+1) + " = " + arrPlants[i]);
+         }
+ 
+         console.log("random plant=" + arrPlants[4]);*/
+         
