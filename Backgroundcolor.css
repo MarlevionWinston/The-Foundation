@@ -13,13 +13,6 @@ color: red;
 
 }
 
-nav{
-    height: 600;
-width: 400px;
-float: left;
-padding: 5px;
-line-height: 30px;
-}
 
 footer{
     text-align: center;
@@ -63,3 +56,13 @@ tr:hover{
     color:aqua;
     background-color: cadetblue;
 }
+
+/* meun styles */
+/* nav a - these styles will only apply to anchor tags in the nav section */
+nav a{
+ text-decoration: none;
+    color: red;
+    font-size: x-large;
+    
+}
+

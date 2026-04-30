@@ -11,33 +11,28 @@
     <meta charset="UTF-8">
     <!-- this is the first step in having a mobile friendly design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Title</title>
+    <title>Index</title>
     <!-- add a link to the css file for background color -->
      <link rel="stylesheet" href="Backgroundcolor.css">
  </head>
  <!-- All of my page content goes between the opening and the closing body tags -->
- <body>
- <!-- Header is a semantic HTML tag 
- header- typically has a logo and/or menu -->
- 
- <header>
-    <!-- h1 is heading1 the page title -->
- <h1>Welcome to my humble home</h1>
- </header>
-
 <button id="btnStart" onclick="startImageMove();">Start Move Image</button>
 <button id="btnStop" onclick="stopImageMove();" disabled="true">Stop Move Image</button>
 <div>
    <p>
       <!-- Image under heading1 -->
+      <nav>
+         <a href="Index.html">Index</a>
+         <a href="Boards.html">Boards</a>
+         <a href="Palindrome.html">Palindrome</a>
+         <a href="plants.html">Plants</a>
+         <a href="Strings.html">Strings</a>
+         <a href="Table.html">Table</a>
+      </nav>
+       <h1>Welcome to my humble home</h1>
       <img id="memeImage" src="dbz-one-piece.gif" width="300"> 
    </p>
 </div>
-<Script>
-
-
-
-</Script>
     <h2>Play my dice game, if you dare</h2>
  <button onclick="playDiceGame();">Play</button>  
   <div id="divMessage">Waiting for the game to start</div>

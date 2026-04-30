@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Input Validations</title>
-</head>
-<body>
+     <!-- add a link to the css file for background color -->
+     <link rel="stylesheet" href="Backgroundcolor.css">
 <header>
+    <nav>
+        <a href="Index.html">Index</a>
+        <a href="Boards.html">Boards</a>
+        <a href="Palindrome.html">Palindrome</a>
+        <a href="plants.html">Plants</a>
+        <a href="Strings.html">Strings</a>
+        <a href="Table.html">Table</a>
+     </nav>
     <h1>Input Validations</h1>
 </header>
 <main>
@@ -27,35 +35,4 @@
 <button type="button" onclick="validate();">Validate!</button>
 </form>
 </main>
-
-<Script>
-// this function will validate the user input based on the requirement of the client (assignment requirements)
-function validate(){
-    // First Name variable
-    let FirstName = document.getElementById("txtFirstName").value;
-    // show the first name in console
-    console.log("FirstName="+FirstName);
-// Last Name Variable
-let LastName = document.getElementById("txtLastName").value;
-// Show the last name in the console
-console.log("LastName="+LastName);
-// Zip code variable
-let zip = document.getElementById("txtZip").value;
-// Show the zip in the console
-console.log("zip="+zip);
-// create a variable to hold the first name + " " + last name
-let fullName = FirstName + " " + LastName;
-
-console.log("fullName="+fullName);
-// create a variable to hold the message we will show to the user
-let message = ""
-// Make sure the full name does not exceed 20 characters
-if (fullName.length == 1 || fullName.length > 20){
-    message = "Please enter a name that is less than 20 characters.";
-}
-
-console.log("message=" + message);
-}
-</Script>
-</body>
 </html>
