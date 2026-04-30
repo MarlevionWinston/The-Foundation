@@ -64,8 +64,18 @@ let message = ""
 if (fullName.length == 1 || fullName.length > 20){
     message = "Please enter a name that is less than 20 characters.";
 }
+else if (zip.length != 5){
+    message = "Please enter a zip code that is exactly 5 characters.";
+}
+// otherswise, the user has entered everything correctly, so show them a message that says the secret word
+else{
+    message= "The secret word is Validation";
+}
 
 console.log("message=" + message);
+
+// Display message
+document.getElementById("divMessage").textContent = message;
 }
 // Code to move the meme around
 
